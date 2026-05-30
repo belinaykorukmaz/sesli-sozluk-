@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilgi Ansiklopedisi | Sesli Sözlük</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+</head>
+<body>
+
+<div class="site-container">
+    <header>
+        <h1>BİLGİ ANSİKLOPEDİSİ</h1>
+        <p>16 Kategoride Sesli Rehber</p>
+    </header>
+
+    <nav>
+        <button onclick="renderTable()">Sözlük (A-Z)</button>
+        <button onclick="showCategories()">Kategoriler</button>
+        <button onclick="showPage('oneri')">Kelime Öner</button>
+        <button onclick="showPage('hakkimizda')">Hakkımızda</button>
+        <button onclick="showPage('iletisim')">İletişim</button>
+        <button onclick="showPage('sss')">S.S.S.</button>
+        <button onclick="showPage('kilavuz')">Kılavuz</button>
+        <button onclick="showPage('ekip')">Ekip</button>
+        <button onclick="showPage('istatistik')">İstatistikler</button>
+        <button onclick="showPage('yasal')">Yasal Bildirim</button>
+    </nav>
+
+    <div class="search-section" style="padding: 15px; background: #f4f4f4; text-align: center; border-bottom: 2px solid #ddd;">
+        <input type="text" id="searchInput" onkeyup="searchDictionary()" placeholder="Kelime veya kategori yazın..."
+               style="width: 80%; padding: 12px; border: 2px solid var(--primary); border-radius: 25px; outline: none; font-size: 16px;">
+    </div>
+
+    <div id="app" class="content">
+        </div>
+
+    <footer>
+        <p>Satırlarına veya kutulara tıklayarak sesli dinleyebilirsiniz.</p>
+        <span>© 2026 Sesli Bilgi Sistemi</span>
+    </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
